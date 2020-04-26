@@ -1,0 +1,10 @@
+.header {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+  background-image: url(../img/img-header.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: grid;
+  align-items: center;
+}

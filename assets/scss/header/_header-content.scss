@@ -1,0 +1,25 @@
+.header-content {
+  position: relative;
+
+  &__container {
+    max-width: 1350px;
+    margin: auto;
+    padding-bottom: 40px;
+    padding-left: 13px;
+    padding-right: 21px;
+  }
+
+  &__title {
+    text-align: center;
+    padding-right: 7px;
+  }
+  
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: 2px;
+    font-size: 1.2rem;
+    letter-spacing: 0.075em;
+    padding-top: 14px;
+  }
+}
