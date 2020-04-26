@@ -552,10 +552,10 @@ a:visited {
 }
 
 .header-menu__container {
-  max-width: 1350px;
+  max-width: 1340px;
   margin: auto;
   padding-left: 0px;
-  padding-right: 20px;
+  padding-right: 23px;
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -569,7 +569,7 @@ a:visited {
 
 .header-logo__link {
   padding-top: 36px;
-  padding-left: 21px;
+  padding-left: 17px;
   display: block;
 }
 
@@ -706,7 +706,7 @@ a:visited {
 }
 
 .header-content__container {
-  max-width: 1350px;
+  max-width: 1340px;
   margin: auto;
   padding-bottom: 40px;
   padding-left: 13px;
@@ -725,7 +725,6 @@ a:visited {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 2px;
   font-size: 1.2rem;
   letter-spacing: 0.075em;
   padding-top: 14px;
@@ -870,7 +869,7 @@ a:visited {
 
 @media (min-width: 577px) {
   .header-content__buttons .btn:first-of-type {
-    margin-right: 17px;
+    margin-right: 20px;
   }
 }
 
