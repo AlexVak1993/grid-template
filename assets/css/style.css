@@ -755,7 +755,7 @@ a:visited {
 .skill-item {
   position: relative;
   min-height: calc(33.33vh - 10px);
-  background-color: #2D3651;
+  background-color: #2d3651;
   overflow: hidden;
 }
 
@@ -801,16 +801,12 @@ a:visited {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2D3651;
+  background-color: #2d3651;
   opacity: 0.8;
   z-index: 1;
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
-}
-
-.skill-item:hover .skill-item__overlay {
-  opacity: 0.95 !important;
 }
 
 .skill-item__image {
@@ -826,12 +822,6 @@ a:visited {
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-.skill-item:hover .skill-item__image {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .skill-item__tittle {
@@ -864,8 +854,18 @@ a:visited {
   letter-spacing: 0.125em;
 }
 
+.skill-item:hover .skill-item__overlay {
+  opacity: 0.95 !important;
+}
+
+.skill-item:hover .skill-item__image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .skill-item:hover .skill-item__link {
-  color: #D66926;
+  color: #d66926;
 }
 
 @media (min-width: 577px) {
