@@ -22,13 +22,13 @@
 @import "footer";
 
 
-@media (min-width: 576px + 1) {
+@media (min-width: $sm + 1) {
   .header-content__buttons .btn:first-of-type {
     margin-right: 20px;
   }
 }
 
-@media (min-width: 768px + 1) {
+@media (min-width: $md + 1) {
   .header-navbar__hamburger {
     display: none;
   }
@@ -41,18 +41,18 @@
   }
 }
 
-@media (min-width: 992px + 1) {
+@media (min-width: $lg + 1) {
   h1 {
     font-size: 3.75rem;
     letter-spacing: 0.075em;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $lg) {
   
 }
 
-@media (max-width: 992px) and (min-width: 768px + 1) {
+@media (max-width: $lg) and (min-width: $md + 1) {
   h1 {
     font-size: 2.5rem;
     letter-spacing: 0.08em;
@@ -73,7 +73,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $md) {
   .header-navbar__hamburger {
     display: block;
     margin: 36px 0
@@ -104,7 +104,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: $sm) {
   .header-content__container {
     padding-bottom: 0px;
     padding-left: 25px;
@@ -115,5 +115,5 @@
   .header-content__buttons {
     flex-direction: column;
     align-items: center;
-  }
+  } 
 }
