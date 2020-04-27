@@ -12,6 +12,15 @@
     transition: 0.5s ease-in-out;
     cursor: pointer;
 
+    @media (min-width: $md + 1) {
+      display: none;
+    }
+
+    @media (max-width: $md) {
+      display: block;
+      margin: 36px 0;
+    }
+
     span {
       display: block;
       position: absolute;
@@ -95,6 +104,18 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (min-width: $md + 1) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+      width: 100%;
+      justify-content: end;
+      padding-right: 0px;
+    }
+
+    @media (max-width: $md) {
+        display: none;
+      }
   }
 
   &__link {
@@ -108,6 +129,10 @@
     &:hover {
       color: $color-accent;
     }
+
+    @media (max-width: $lg) and (min-width: $md + 1) {
+      padding-top: 33px;
+      padding-left: 36px;
+    }
   }
 }
-

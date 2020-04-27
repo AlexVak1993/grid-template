@@ -13,6 +13,21 @@ html {
 h1 {
   font-family: $font-header;
   font-weight: 300;
+
+  @media (min-width: $lg + 1) {
+    font-size: 3.75rem;
+    letter-spacing: 0.075em;
+  }
+
+  @media (max-width: $lg) and (min-width: $md + 1) {
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: $md) {
+    font-size: 1.875rem;
+    letter-spacing: 0.075em;
+  }
 }
 a {
   text-decoration: none;
@@ -32,9 +47,23 @@ a:visited {
 }
 .btn {
   background-color: rgba($color-light, 0.1);
-  border: 2px solid $color-light ;
+  border: 2px solid $color-light;
   min-width: 250px;
   padding-top: 18px;
+
+  @media (max-width: $lg) and (min-width: $md + 1) {
+    min-width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 16px 20px;
+  }
+
+  @media (max-width: $md) {
+    min-width: 170px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 7px 20px;
+  }
 }
 
 .btn:hover,
