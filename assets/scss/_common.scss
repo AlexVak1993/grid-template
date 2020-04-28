@@ -14,17 +14,17 @@ h1 {
   font-family: $font-header;
   font-weight: 300;
 
-  @media (min-width: $lg + 1) {
+  @include lg-min {
     font-size: 3.75rem;
     letter-spacing: 0.075em;
   }
 
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     font-size: 2.5rem;
     letter-spacing: 0.08em;
   }
 
-  @media (max-width: $md) {
+  @include md {
     font-size: 1.875rem;
     letter-spacing: 0.075em;
   }
@@ -36,29 +36,22 @@ a {
 a:visited {
   color: $color-light;
 }
-.btn,
-.btn-accent {
-  display: block;
-  padding: 18px 20px;
-  transition: background-color 0.5s;
 
-  text-align: center;
-  height: 60px;
-}
 .btn {
   background-color: rgba($color-light, 0.1);
   border: 2px solid $color-light;
   min-width: 250px;
   padding-top: 18px;
+  @extend %btn-common;
 
-  @media (max-width: $lg) and (min-width: $md + 1) {
+  @include lg-md {
     min-width: 200px;
     height: 50px;
     font-size: 1rem;
     padding: 16px 20px;
   }
 
-  @media (max-width: $md) {
+  @include md {
     min-width: 170px;
     height: 40px;
     font-size: 1rem;
@@ -66,14 +59,11 @@ a:visited {
   }
 }
 
-.btn:hover,
-.btn-accent:hover {
-  background-color: $color-accent;
-}
 .btn-accent {
   background-color: rgba($color-primary, 0.8);
   border: 2px solid $color-primary;
   min-width: 350px;
   font-size: 1.125rem;
   letter-spacing: 0.1em;
+  @extend %btn-common;
 }

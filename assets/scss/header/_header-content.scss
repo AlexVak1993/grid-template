@@ -2,23 +2,20 @@
   position: relative;
 
   &__container {
-    max-width: $ul;
-    margin: auto;
     padding-bottom: 40px;
-    padding-left: 13px;
-    padding-right: 21px;
+    @extend %container;
 
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       padding-top: 74px;
       padding-left: 25px;
     }
 
-    @media (max-width: $md) {
+    @include md {
       padding-bottom: 232px;
       padding-left: 25px;
     }
 
-    @media (max-width: $sm) {
+    @include sm {
       padding-bottom: 0px;
       padding-left: 25px;
     }
@@ -26,7 +23,7 @@
 
   &__title {
     text-align: center;
-    padding-right: 7px;
+    padding-right: 15px;
   }
 
   &__buttons {
@@ -36,18 +33,16 @@
     letter-spacing: 0.075em;
     padding-top: 14px;
 
-    @media (min-width: $sm + 1) {
+    @include sm-min {
       .btn:first-of-type {
         margin-right: 20px;
       }
     }
 
-    @media (max-width: $sm) {
+    @include sm {
       flex-direction: column;
       align-items: center;
-    }
 
-    @media (max-width: $sm) {
       .btn:first-of-type {
         margin-bottom: 17px;
       }

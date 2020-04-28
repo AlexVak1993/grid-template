@@ -12,11 +12,11 @@
     transition: 0.5s ease-in-out;
     cursor: pointer;
 
-    @media (min-width: $md + 1) {
+    @include md-min {
       display: none;
     }
 
-    @media (max-width: $md) {
+    @include md {
       display: block;
       margin: 36px 0;
     }
@@ -105,15 +105,15 @@
     margin: 0;
     padding: 0;
 
-    @media (min-width: $md + 1) {
+    @include md-min {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       width: 100%;
       justify-content: end;
-      padding-right: 0px;
+      padding-right: 3px;
     }
 
-    @media (max-width: $md) {
+    @include md {
         display: none;
       }
   }
@@ -130,7 +130,7 @@
       color: $color-accent;
     }
 
-    @media (max-width: $lg) and (min-width: $md + 1) {
+    @include lg-md {
       padding-top: 33px;
       padding-left: 36px;
     }

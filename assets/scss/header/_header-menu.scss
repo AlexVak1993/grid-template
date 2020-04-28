@@ -5,16 +5,13 @@
   width: 100%;
   z-index: 1;
 
-  @media (max-width: $md) {
+  @include md {
       background-color: rgba(68, 89, 110, 0.25);
     }
 
   &__container {
-    max-width: $ul;
-    margin: auto;
-    padding-left: 0px;
-    padding-right: 23px;
     display: grid;
     grid-template-columns: auto 1fr;
+    @extend %container;
   }
 }
