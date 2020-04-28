@@ -1,11 +1,37 @@
 .skills {
-  padding: ($gap / 2) ($gap / 4) ($gap * 2) 0px;
+  @include sm-min {
+    padding: ($gap / 2) ($gap / 2) ($gap * 2) ($gap / 2);
+  }
+  @include sm {
+    padding: $gap;
+  }
 
   &__container {
     display: grid;
-    grid-gap: $gap / 2;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+
+    @include lg-min {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+      grid-gap: $gap / 2;
+    }
+
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+      grid-gap: $gap / 2;
+    }
+
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+      grid-gap: $gap / 2;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9" ;
+      grid-gap: $gap;
+    }
   }
 
   &__button {
@@ -78,8 +104,15 @@
     height: 100%;
     align-items: center;
     transition: color 0.5s;
-    font-size: 1.2rem;
-    letter-spacing: 0.125em;
+    letter-spacing: 0.1em;
+
+    @include md-min {
+      font-size: 1.25rem;
+    }
+
+    @include md {
+      font-size: 1.125rem;
+    }
   }
 
   &:hover {

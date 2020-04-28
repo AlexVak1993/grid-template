@@ -2,6 +2,7 @@
   display: grid;
   align-items: center;
   justify-items: end;
+  position: relative;
 
   &__hamburger {
     width: 30px;
@@ -101,9 +102,11 @@
   }
 
   &__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include unlist;
+
+    &.open {
+      display: block;
+    }
 
     @include md-min {
       display: grid;
@@ -115,6 +118,13 @@
 
     @include md {
         display: none;
+        position: absolute;
+        top: 0;
+        right: $gap * 2;
+        background-color: rgba($color-gray-dark, 0.9);
+        text-align: right;
+        padding-bottom: 10px;
+        width: 140px;
       }
   }
 
@@ -125,6 +135,10 @@
     padding-top: 37px;
     padding-left: 38px;
     transition: color 0.5s;
+    
+    @include md {
+      padding-right: 20px;      
+    }
 
     &:hover {
       color: $color-accent;
