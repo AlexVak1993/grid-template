@@ -4,7 +4,7 @@
 
   &__overlay {
     @include abs-position;
-    background-color: darken($color-light, 10%);
+    background-color: $color-gray-light;
     z-index: -1;
   }
 
