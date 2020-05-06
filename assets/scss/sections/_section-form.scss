@@ -1,18 +1,77 @@
 .form {
-  height: 120px;
   background-color: $color-primary;
+
+  @include lg-min {
+    height: 120px;
+  }
+
+  @include lg-md {
+    height: 100px;
+  }
+
+  @include md-sm {
+    height: 182px;
+  }
+
+  @include sm {
+    height: 262px;
+  }
 
   &__container {
     @extend %container;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, calc(33.3% - 15px));
-    grid-gap: $gap;
     align-items: center;
+
+    @include lg-min {
+      grid-template-columns: repeat(3, calc(33.3% - 15px));
+      grid-gap: $gap;
+    }
+
+    @include lg-md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: $gap;
+      padding: 0 $gap;
+    }
+
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: $gap;
+      padding: $gap;
+    }
   }
 
   &__input {
     @extend %input-theme;
+
+    @include lg-min {
+      margin-left: -$gap / 4;
+      padding-left: $gap * 1.5;
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+    }
+
+    @include lg-md {
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      padding-left: 22px;
+      padding-bottom: 3px;
+    }
+
+    @include md-sm {
+      grid-column: 1 / span 2;
+      font-size: 1.125rem;
+      letter-spacing: 0.1em;
+      padding-left: 23px;
+    }
+
+    @include sm {
+      font-size: 1.125rem;
+      letter-spacing: 0.1em;
+      padding-left: 22px;
+      padding-top: 10px;
+      margin: 6px 20px 0px 20px;
+    }
 
     &::placeholder {
       color: $color-light;
@@ -20,6 +79,33 @@
 
     &--accent {
       @extend %input-theme;
+
+      @include lg-min {
+        margin-left: -$gap / 4;
+        padding-left: $gap * 1.5;
+        font-size: 1.25rem;
+        letter-spacing: 0.05em;
+      }
+
+      @include lg-md {
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+        padding-left: 23px;
+        padding-bottom: 6px;
+      }
+
+      @include md-sm {
+        font-size: 1.125rem;
+        letter-spacing: 0.1em;
+        padding-left: 22px;
+      }
+
+      @include sm {
+        font-size: 1.125rem;
+        letter-spacing: 0.1em;
+        padding-left: 22px;
+        margin: 6px 20px 0 20px;
+      }
 
       &::placeholder {
         color: rgba($color-light, 0.5);
@@ -42,5 +128,27 @@
 
     font-size: 1.25rem;
     letter-spacing: 0.05em;
+
+    @include lg-md {
+      height: 60px;
+      padding-left: 25px;
+      letter-spacing: 0.1em;
+    }
+
+    @include md-sm {
+      height: 60px;
+      padding-left: 25px;
+      font-size: 1.125rem;
+      letter-spacing: 0.1em;
+      width: 352px;
+    }
+
+    @include sm {
+      height: 60px;
+      margin: 0 20px 12px 20px;
+      padding-left: 25px;
+      font-size: 1.125rem;
+      letter-spacing: 0.1em;
+    }
   }
 }

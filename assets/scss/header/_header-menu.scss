@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 1;
 
+  @include lg {
+    padding-right: 10px;
+  }
+
   @include md {
       background-color: rgba(68, 89, 110, 0.25);
     }

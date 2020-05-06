@@ -19,19 +19,55 @@
 
     &::after {
       position: absolute;
-      top: 46%;
-      left: 48%;
       height: 2px;
       width: 75px;
       background-color: $color-gray-dark;
       content: "";
+
+      @include lg-min {
+        top: 46%;
+        left: 48%;
+      }
+
+      @include lg-md {
+        top: 45%;
+        left: 46.3%;
+      }
+
+      @include md-sm {
+        top: 48%;
+        left: 45.1%;
+      }
+
+      @include sm {
+        top: 50%;
+        left: 43.5%;
+      }
     }
   }
 
   &__copyright {
     @extend %txt-center;
-    padding-top: 60px;
     padding-bottom: 20px;
+
+    @include lg-min {
+      padding-top: 60px;
+    }
+
+    @include lg-md {
+      padding-left: 5px;
+      padding-top: 50px;
+    }
+
+    @include md-sm {
+      padding-left: 5px;
+      padding-top: 68px;
+    }
+
+    @include sm {
+      padding-left: 5px;
+      padding-top: 76px;
+    }
 
     span {
       font-weight: 300;

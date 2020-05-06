@@ -38,6 +38,10 @@
     display: flex;
     justify-content: center;
     padding-top: $gap;
+
+    @include md-sm {
+      padding-left: 12px;
+    }
   }
 }
 
@@ -52,6 +56,15 @@
 
   @include lg {
     min-height: 350px;
+  }
+
+  @include md-sm {
+    &:nth-of-type(5) {
+      min-height: 720px;
+    }
+    &:nth-of-type(7) {
+      min-height: 360px;
+    }
   }
 
   &:nth-of-type(1) {

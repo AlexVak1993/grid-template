@@ -1,6 +1,17 @@
 .about {
   position: relative;
-  min-height: 652px;
+
+  @include lg-min {
+    min-height: 652px;
+  }
+
+  @include lg-md {
+    max-height: 563px;
+  }
+
+  @include md-sm {
+    max-height: 479px;
+  }
 
   &__overlay {
     @include abs-position;
@@ -12,42 +23,174 @@
     display: grid;
     position: relative;
     @extend %container;
-    padding-top: 73px;
-    grid-template-columns: 1fr 271px;
-    grid-gap: $gap * 5;
+
+    @include lg-min {
+      grid-template-columns: 1fr 271px;
+      grid-gap: $gap * 5;
+    }
+
+    @include lg-md {
+      grid-template-columns: 1fr 255px;
+      grid-gap: $gap * 3;
+      padding-right: $gap * 1.5;
+    }
+
+    @include md-sm {
+      grid-template-columns: 1fr 236px;
+      grid-gap: $gap * 3;
+      padding-right: $gap * 2;
+    }
+
+    @include sm {
+      padding-left: $gap;
+    }
   }
 
   &__content {
     display: grid;
     position: relative;
 
+    @include lg-min {
+      padding-top: 73px;
+    }
+
+    @include lg-md {
+      padding-top: 55px;
+      padding-left: $gap;
+    }
+
+    @include md-sm {
+      padding-top: 43px;
+      padding-left: 23px;
+      line-height: 1.25;
+    }
+
+    @include sm {
+      padding-top: 62px;
+    }
+
+    &--caption {
+
+      @include lg-md {
+        max-height: 315px;
+        max-width: 630px;
+        margin-bottom: 70px;
+        overflow: scroll;
+      }
+      @include md-sm {
+        max-height: 275px;
+        max-width: 414px;
+        margin-bottom: 76px;
+        overflow: scroll;
+      }
+      @include sm {
+        max-height: 315px;
+        max-width: 532px;
+        margin-bottom: 57px;
+        overflow: scroll;
+      }
+    }
+
     &::after {
       position: absolute;
-      top: 170px;
-      right: -58px;
       height: 200px;
       background-color: darken($color-light, 27%);
       width: 2px;
       content: "";
+
+      @include lg-min {
+        top: 170px;
+        right: -58px;
+      }
+
+      @include lg-md {
+        top: 182px;
+        right: -26px;
+      }
+
+      @include md-sm {
+        top: 152px;
+        right: -18px;
+      }
+
+      @include sm {
+        display: none;
+      }
     }
 
     h2 {
       font-style: $font-header;
-      font-size: 2.5rem;
-      letter-spacing: 0.125em;
       color: $color-primary;
+
+      @include lg-min {
+        font-size: 2.5rem;
+        letter-spacing: 0.125em;
+      }
+
+      @include lg-md {
+        font-size: 2rem;
+        letter-spacing: 0.125em;
+        margin-bottom: 22px;
+      }
+
+      @include md-sm {
+        font-size: 1.5rem;
+        letter-spacing: 0.125em;
+        margin-bottom: 0;
+      }
+
+      @include sm {
+        margin: 0 auto;
+        text-align: center;
+        letter-spacing: 0.125em;
+        padding-right: 12px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+      }
     }
 
     p {
-      font-size: 1.125rem;
-      letter-spacing: 0.05em;
-      line-height: 1.3;
       margin-bottom: 0px;
+
+      @include md-min {
+        font-size: 1.125rem;
+        letter-spacing: 0.05em;
+        line-height: 1.3;
+      }
+
+      @include md-sm {
+        font-size: 1.075rem;
+        letter-spacing: 0.0125em;
+        line-height: 1.4;
+      }
+
+      @include sm {
+        line-height: 1.5;
+      }
     }
   }
 
   &__image {
     display: grid;
-    padding-top: $gap * 1.5;
+
+    @include lg-min {
+      padding-top: $gap * 1.5;
+    }
+
+    @include lg-md {
+      transform: scale(0.95);
+      padding-top: 69px;
+    }
+
+    @include md-sm {
+      transform: scale(0.85);
+      padding-top: 5px;
+    }
+
+    @include sm {
+      width: 270px;
+      padding-left: 145px;
+      padding-bottom: 67px;
+    }
   }
 }

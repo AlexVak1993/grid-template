@@ -5,19 +5,64 @@
 
   &__tittle {
     font-family: $font-header;
-    font-size: 2.5rem;
     color: $color-primary;
     letter-spacing: 0.1em;
-    padding-top: $gap * 3;
-    padding-bottom: $gap;
+
+    @include lg-min {
+      padding-top: $gap * 3;
+      padding-bottom: $gap;
+      font-size: 2.5rem;
+    }
+
+    @include lg-md {
+      padding-top: 48px;
+      padding-left: 20px;
+      padding-bottom: 13px;
+      font-size: 2rem;
+    }
+
+    @include md-sm {
+      padding-top: 36px;
+      padding-left: 20px;
+      padding-bottom: 9px;
+      font-size: 1.5rem;
+    }
+
+    @include sm {
+      padding-top: 34px;
+      text-align: center;
+      padding-bottom: 9px;
+      font-size: 1.5rem;
+    }
   }
 
   &-item {
     &--wrapper {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
       grid-gap: $gap;
+
+      @include lg-min {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "b1 b1 b2 b3" "b4 b5 b6 b6";
+      }
+
+      @include lg-md {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "b1 b1 b2" "b3 b4 b4" "b5 b5 b6";
+        padding: 0 20px;
+      }
+
+      @include md-sm {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "b1 b2" "b3 b4" "b5 b6";
+        padding: 0 20px;
+      }
+
+      @include sm {
+        grid-template-columns: 1fr;
+        grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
+        padding: 0 20px;
+      }
     }
 
     background-color: darken($color-light, 7%);
@@ -76,9 +121,36 @@
   }
 
   &__button {
-    max-width: 350px;
     margin: 0 auto;
     padding-top: $gap;
-    padding-bottom: $gap * 5;
+    
+    @include lg-min {
+      max-width: 350px;
+      padding-bottom: $gap * 5;
+    }
+    @include lg-md {
+      max-width: 350px;
+      padding-bottom: $gap * 4;
+    }
+    @include md-sm {
+      max-width: 350px;
+      padding-bottom: $gap * 3;
+    }
+
+    @include sm {
+      padding-bottom: $gap * 3;
+      padding: 20px 20px 60px 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    
+
+    a {
+      @include lg-md {
+        height: 60px;
+        padding-top: 18px;
+        padding-right: 16px;
+      }
+    }
   }
 }

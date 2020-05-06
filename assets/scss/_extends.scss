@@ -19,12 +19,9 @@
 %input-theme {
   height: 60px;
   align-items: center;
-  padding-left: $gap * 1.5;
-  margin-left: -$gap / 4;
   color: $color-light;
   background-color: rgba($color-light, 0.05);
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
+  font-family: $font-main;
   border: none;
   border-bottom: 2px solid rgba($color-light, 0.10);
   outline: none;

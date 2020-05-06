@@ -55,7 +55,11 @@ a:visited {
     min-width: 170px;
     height: 40px;
     font-size: 1rem;
-    padding: 7px 20px;
+    padding: 9px 20px;
+  }
+
+  @include sm {
+    padding: 9px 20px;
   }
 }
 
@@ -65,6 +69,11 @@ a:visited {
   font-size: 1.125rem;
   letter-spacing: 0.1em;
   @extend %btn-common;
+
+  @include lg-md {
+    height: 66px;
+    padding-top: 22px;
+  }
 
   @include sm-min {
     min-width: 350px;
