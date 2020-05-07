@@ -48,25 +48,22 @@
 
   &__copyright {
     @extend %txt-center;
-    padding-bottom: 20px;
+    @include padding(null, null, $gap, null);
 
     @include lg-min {
-      padding-top: 60px;
+      @include padding($gap * 3, null, null, null);
     }
 
     @include lg-md {
-      padding-left: 5px;
-      padding-top: 50px;
+      @include padding($gap * 2.5, null, null, $gap / 4);
     }
 
     @include md-sm {
-      padding-left: 5px;
-      padding-top: 68px;
+      @include padding(68px, null, null, $gap / 4);
     }
 
     @include sm {
-      padding-left: 5px;
-      padding-top: 76px;
+      @include padding(76px, null, null, $gap / 4);
     }
 
     span {

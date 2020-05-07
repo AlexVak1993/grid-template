@@ -113,7 +113,6 @@
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       width: 100%;
       justify-content: end;
-      padding-right: 3px;
     }
 
     @include md {
@@ -130,10 +129,8 @@
 
   &__link {
     display: block;
-    font-size: 1.25rem;
-    letter-spacing: 0.05rem;
-    padding-top: 37px;
-    padding-left: 38px;
+    @include letter-size(1.25rem, 0.025em);
+    @include padding(37px, null, null, $gap * 2);
     transition: color 0.5s;
     
     @include md {
@@ -145,8 +142,7 @@
     }
 
     @include lg-md {
-      padding-top: 33px;
-      padding-left: 36px;
+      @include padding(33px, null, null, 41px);
     }
   }
 }

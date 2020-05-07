@@ -51,26 +51,23 @@
     position: relative;
 
     @include lg-min {
-      padding-top: 73px;
+      @include padding(69px, null, null, null);
     }
 
     @include lg-md {
-      padding-top: 55px;
-      padding-left: $gap;
+      @include padding(55px, null, null, $gap);
     }
 
     @include md-sm {
-      padding-top: 43px;
-      padding-left: 23px;
+      @include padding(43px, null, null, 23px);
       line-height: 1.25;
     }
 
     @include sm {
-      padding-top: 62px;
+      @include padding(62px, null, null, null);
     }
 
     &--caption {
-
       @include lg-md {
         max-height: 315px;
         max-width: 630px;
@@ -99,8 +96,8 @@
       content: "";
 
       @include lg-min {
-        top: 170px;
-        right: -58px;
+        top: 243px;
+        right: -53px;
       }
 
       @include lg-md {
@@ -123,28 +120,25 @@
       color: $color-primary;
 
       @include lg-min {
-        font-size: 2.5rem;
-        letter-spacing: 0.125em;
+        @include letter-size(2.5rem, 0.125em);
       }
 
       @include lg-md {
-        font-size: 2rem;
-        letter-spacing: 0.125em;
+        @include letter-size(2rem, 0.125em);
         margin-bottom: 22px;
       }
 
       @include md-sm {
-        font-size: 1.5rem;
-        letter-spacing: 0.125em;
+        @include letter-size(1.5rem, 0.125em);
         margin-bottom: 0;
       }
 
       @include sm {
-        margin: 0 auto;
         text-align: center;
         letter-spacing: 0.125em;
-        padding-right: 12px;
         line-height: 1.25;
+        margin: 0 auto;
+        padding-right: 12px;
         margin-bottom: 10px;
       }
     }
@@ -153,14 +147,12 @@
       margin-bottom: 0px;
 
       @include md-min {
-        font-size: 1.125rem;
-        letter-spacing: 0.05em;
+        @include letter-size(1.125rem, 0.005em);
         line-height: 1.3;
       }
 
       @include md-sm {
-        font-size: 1.075rem;
-        letter-spacing: 0.0125em;
+        @include letter-size(1.075rem, 0.0125em);
         line-height: 1.4;
       }
 
@@ -174,23 +166,22 @@
     display: grid;
 
     @include lg-min {
-      padding-top: $gap * 1.5;
+      @include padding($gap * 5, null, null, null);
     }
 
     @include lg-md {
       transform: scale(0.95);
-      padding-top: 69px;
+      @include padding(69px, null, null, null);
     }
 
     @include md-sm {
       transform: scale(0.85);
-      padding-top: 5px;
+      @include padding(5px, null, null, null);
     }
 
     @include sm {
       width: 270px;
-      padding-left: 145px;
-      padding-bottom: 67px;
+      @include padding(null, null, 67px, 145px);
     }
   }
 }

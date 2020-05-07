@@ -45,16 +45,16 @@ a:visited {
   @extend %btn-common;
 
   @include lg-md {
+    font-size: 1rem;
     min-width: 200px;
     height: 50px;
-    font-size: 1rem;
     padding: 16px 20px;
   }
 
   @include md {
+    font-size: 1rem;
     min-width: 170px;
     height: 40px;
-    font-size: 1rem;
     padding: 9px 20px;
   }
 
@@ -66,8 +66,7 @@ a:visited {
 .btn-accent {
   background-color: rgba($color-primary, 0.8);
   border: 2px solid $color-primary;
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
+  @include letter-size(1.125rem, 0.1em);
   @extend %btn-common;
 
   @include lg-md {

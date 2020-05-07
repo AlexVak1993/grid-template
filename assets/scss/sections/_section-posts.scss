@@ -9,29 +9,23 @@
     letter-spacing: 0.1em;
 
     @include lg-min {
-      padding-top: $gap * 3;
-      padding-bottom: $gap;
+      @include padding($gap * 3, null, $gap, null);
       font-size: 2.5rem;
     }
 
     @include lg-md {
-      padding-top: 48px;
-      padding-left: 20px;
-      padding-bottom: 13px;
+      @include padding(48px, null, 13px, $gap);
       font-size: 2rem;
     }
 
     @include md-sm {
-      padding-top: 36px;
-      padding-left: 20px;
-      padding-bottom: 9px;
+      @include padding(36px, null, 9px, $gap);
       font-size: 1.5rem;
     }
 
     @include sm {
-      padding-top: 34px;
+      @include padding(34px, null, 9px, null);
       text-align: center;
-      padding-bottom: 9px;
       font-size: 1.5rem;
     }
   }
@@ -100,7 +94,7 @@
     }
 
     &__info {
-      @include abs-position($t: 55.5);
+      @include abs-position($t: 55.5%);
       height: 250px;
       display: grid;
       align-content: center;
@@ -110,8 +104,7 @@
     &__tittle {
       text-align: center;
       font-family: $font-header;
-      font-size: 1.125rem;
-      letter-spacing: 0.05em;
+      @include letter-size(1.125rem, 0.05em);
     }
 
     &__caption {
@@ -139,7 +132,7 @@
 
     @include sm {
       padding-bottom: $gap * 3;
-      padding: 20px 20px 60px 20px;
+      @include padding($gap, $gap, $gap * 3, $gap);
       display: grid;
       grid-template-columns: 1fr;
     }
@@ -148,8 +141,7 @@
     a {
       @include lg-md {
         height: 60px;
-        padding-top: 18px;
-        padding-right: 16px;
+        @include padding(18px, 16px, null, null);
       }
     }
   }

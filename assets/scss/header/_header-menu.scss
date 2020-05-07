@@ -6,7 +6,7 @@
   z-index: 1;
 
   @include lg {
-    padding-right: 10px;
+    padding-right: $gap / 2;
   }
 
   @include md {

@@ -46,31 +46,25 @@
 
     @include lg-min {
       margin-left: -$gap / 4;
-      padding-left: $gap * 1.5;
-      font-size: 1.25rem;
-      letter-spacing: 0.05em;
+      @include letter-size(1.25rem, 0.05em);
+      @include padding(null, null, null, $gap * 1.5);
     }
 
     @include lg-md {
-      font-size: 1rem;
-      letter-spacing: 0.1em;
-      padding-left: 22px;
-      padding-bottom: 3px;
+      @include letter-size(1rem, 0.1em);
+      @include padding(null, null, 3px, 22px);
     }
 
     @include md-sm {
       grid-column: 1 / span 2;
-      font-size: 1.125rem;
-      letter-spacing: 0.1em;
-      padding-left: 23px;
+      @include letter-size(1.125rem, 0.1em);
+      @include padding(null, null, null, 23px);
     }
 
     @include sm {
-      font-size: 1.125rem;
-      letter-spacing: 0.1em;
-      padding-left: 22px;
-      padding-top: 10px;
-      margin: 6px 20px 0px 20px;
+      @include letter-size(1.125rem, 0.1em);
+      @include padding($gap / 2, null, null, 22px);
+      @include margin(6px, $gap, 0, $gap);
     }
 
     &::placeholder {
@@ -81,30 +75,25 @@
       @extend %input-theme;
 
       @include lg-min {
-        margin-left: -$gap / 4;
-        padding-left: $gap * 1.5;
-        font-size: 1.25rem;
-        letter-spacing: 0.05em;
+        @include letter-size(1.25rem, 0.05em);
+        @include padding(null, null, null, $gap *1.5);
+        @include margin(null, null, null, -$gap / 4);
       }
 
       @include lg-md {
-        font-size: 1rem;
-        letter-spacing: 0.1em;
-        padding-left: 23px;
-        padding-bottom: 6px;
+        @include letter-size(1rem, 0.1em);
+        @include padding(null, null, 6px, 23px);
       }
 
       @include md-sm {
-        font-size: 1.125rem;
-        letter-spacing: 0.1em;
-        padding-left: 22px;
+        @include letter-size(1.125rem, 0.1em);
+        @include padding(null, null, null, 22px);
       }
 
       @include sm {
-        font-size: 1.125rem;
-        letter-spacing: 0.1em;
-        padding-left: 22px;
-        margin: 6px 20px 0 20px;
+        @include letter-size(1.125rem, 0.1em);
+        @include padding(null, null, null, 22px);
+        @include margin(6px, $gap, 0, $gap);
       }
 
       &::placeholder {
@@ -136,19 +125,17 @@
     }
 
     @include md-sm {
+      @include letter-size(1.125rem, 0.1em);
       height: 60px;
       padding-left: 25px;
-      font-size: 1.125rem;
-      letter-spacing: 0.1em;
       width: 352px;
     }
 
     @include sm {
+      @include letter-size(1.125rem, 0.1em);
+      @include margin(0, $gap, 12px, $gap);
       height: 60px;
-      margin: 0 20px 12px 20px;
       padding-left: 25px;
-      font-size: 1.125rem;
-      letter-spacing: 0.1em;
     }
   }
 }

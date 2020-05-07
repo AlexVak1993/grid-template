@@ -1,5 +1,6 @@
 .header-logo {
   align-self: center;
+  @include letter-size(1.5rem, 0.03em);
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
 
@@ -12,12 +13,12 @@
     display: block;
 
     @include md {
-      padding-top: 7px;
+      padding-top: 5px;
     }
   }
 
   &__accent {
-    padding: 12px 2px 14px 3px;
+    @include padding(12px, 2px, 14px, 3px);
     border: 2px solid $color-highlight;
     margin-right: 5px;
   }
