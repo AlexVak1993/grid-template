@@ -181,7 +181,8 @@
 
     @include sm {
       width: 270px;
-      @include padding(null, null, 67px, 145px);
+      justify-self: center;
+      @include padding(null, null, 67px, null);
     }
   }
 }
