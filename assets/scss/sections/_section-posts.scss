@@ -31,6 +31,10 @@
   }
 
   &-item {
+    overflow: hidden;
+    position: relative;
+    height: 550px;
+
     &--wrapper {
       display: grid;
       grid-gap: $gap;
@@ -59,11 +63,6 @@
       }
     }
 
-    background-color: darken($color-light, 7%);
-    position: relative;
-    height: 550px;
-    transition: 0.5s;
-
     &:nth-of-type(1) {
       grid-area: b1;
     }
@@ -83,40 +82,58 @@
       grid-area: b6;
     }
 
-    &:hover {
-      background-color: darken($color-light, 20%);
-    }
-
     &__image {
       @include abs-position($b: 45.5%);
       background-position: 50% 50%;
       background-size: cover;
+      transition: transform 0.5s;
     }
 
     &__info {
-      @include abs-position($t: 55.5%);
+      @include abs-position($t: 54.5%);
       height: 250px;
       display: grid;
       align-content: center;
-      padding: $gap;
+      padding: 28px;
+      background-color: darken($color-light, 7%);
+      transition: 0.5s;
     }
 
     &__tittle {
       text-align: center;
       font-family: $font-header;
       @include letter-size(1.125rem, 0.05em);
+      transition: 0.5s;
+      margin: 0;
     }
 
     &__caption {
       text-align: center;
       letter-spacing: 0;
+      transition: 0.5s;
+      margin-top: $gap;
+    }
+
+    &:hover {
+      .posts-item__image {
+        transform: scale(1.1);
+      }
+      .posts-item__info {
+        background-color: darken($color-light, 20%);
+      }
+      .posts-item__tittle {
+        color: $color-primary;
+      }
+      .posts-item__caption {
+        color: $color-primary;
+      }
     }
   }
 
   &__button {
     margin: 0 auto;
     padding-top: $gap;
-    
+
     @include lg-min {
       max-width: 350px;
       padding-bottom: $gap * 5;
@@ -136,7 +153,6 @@
       display: grid;
       grid-template-columns: 1fr;
     }
-    
 
     a {
       @include lg-md {

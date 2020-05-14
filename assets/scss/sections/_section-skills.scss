@@ -8,6 +8,7 @@
 
   &__container {
     display: grid;
+    padding-bottom: 20px;
 
     @include lg-min {
       grid-template-columns: repeat(4, 1fr);
@@ -37,7 +38,6 @@
   &__button {
     display: flex;
     justify-content: center;
-    padding-top: $gap;
 
     @include md-sm {
       padding-left: 12px;
@@ -51,7 +51,7 @@
   overflow: hidden;
 
   @include lg-min {
-    min-height: calc(33.33vh - 10px);
+    min-height: calc(33.33vh - 20px * 0.66);
   }
 
   @include lg {

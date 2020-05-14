@@ -15,18 +15,15 @@ h1 {
   font-weight: 300;
 
   @include lg-min {
-    font-size: 3.75rem;
-    letter-spacing: 0.075em;
+    @include letter-size(3.75rem, 0.08em);
   }
 
   @include lg-md {
-    font-size: 2.5rem;
-    letter-spacing: 0.08em;
+    @include letter-size(2.5rem, 0.08em);
   }
 
   @include md {
-    font-size: 1.875rem;
-    letter-spacing: 0.075em;
+    @include letter-size(1.875rem, 0.075em);
   }
 }
 a {
@@ -41,14 +38,15 @@ a:visited {
   background-color: rgba($color-light, 0.1);
   border: 2px solid $color-light;
   min-width: 250px;
-  padding-top: 18px;
   @extend %btn-common;
+  @include letter-size(1.125rem, 0.1em);
+  @include padding(18px, 24px, null, null);
 
   @include lg-md {
     font-size: 1rem;
     min-width: 200px;
     height: 50px;
-    padding: 16px 20px;
+    padding: 13px 20px;
   }
 
   @include md {

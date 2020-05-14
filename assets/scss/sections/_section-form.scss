@@ -24,7 +24,7 @@
     align-items: center;
 
     @include lg-min {
-      grid-template-columns: repeat(3, calc(33.3% - 15px));
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: $gap;
     }
 
@@ -45,9 +45,8 @@
     @extend %input-theme;
 
     @include lg-min {
-      margin-left: -$gap / 4;
-      @include letter-size(1.25rem, 0.05em);
-      @include padding(null, null, null, $gap * 1.5);
+      @include letter-size(1.125rem, 0.1em);
+      @include padding(3px, null, null, 32px);
     }
 
     @include lg-md {
@@ -75,9 +74,8 @@
       @extend %input-theme;
 
       @include lg-min {
-        @include letter-size(1.25rem, 0.05em);
-        @include padding(null, null, null, $gap *1.5);
-        @include margin(null, null, null, -$gap / 4);
+        @include letter-size(1.125rem, 0.1em);
+        @include padding(null, null, null, 36px);
       }
 
       @include lg-md {
@@ -114,21 +112,23 @@
     border: none;
     border-bottom: 2px solid rgba($color-light, 0.25);
     color: $color-light;
+    @include letter-size(1.25rem, 0.05em);
 
-    font-size: 1.25rem;
-    letter-spacing: 0.05em;
+    @include lg-min {
+      padding-left: 27px;
+    }
 
     @include lg-md {
       height: 60px;
-      padding-left: 25px;
       letter-spacing: 0.1em;
+      padding-left: 25px;
     }
 
     @include md-sm {
       @include letter-size(1.125rem, 0.1em);
       height: 60px;
-      padding-left: 25px;
       width: 352px;
+      padding-left: 25px;
     }
 
     @include sm {
