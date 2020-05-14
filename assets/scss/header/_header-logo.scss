@@ -1,11 +1,9 @@
 .header-logo {
   align-self: center;
-  @include letter-size(1.5rem, 0.03em);
-  font-size: 1.5rem;
-  letter-spacing: 0.3rem;
+  @include letter-size(1.5rem, 0.22em);
 
   @include lg {
-    padding-left: 24px;
+    padding-left: 21px;
   }
 
   &__link {
@@ -18,8 +16,8 @@
   }
 
   &__accent {
-    @include padding(12px, 2px, 14px, 3px);
-    border: 2px solid $color-highlight;
-    margin-right: 5px;
+    @include padding(12px, 0, 14px, 3px);
+    border: 3px solid $color-highlight;
+    margin-right: 3px;
   }
 }

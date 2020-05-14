@@ -113,6 +113,7 @@
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
       width: 100%;
       justify-content: end;
+      padding-right: 2px;
     }
 
     @include md {
@@ -122,16 +123,21 @@
       right: 35px;
       background-color: rgba($color-gray-dark, 0.9);
       text-align: center;
-      padding-bottom: 30px;
+      @include padding(null, 14px, 30px, null);
       width: 153px;
-      padding-right: 14px;
+    }
+
+    @include sm {
+      top: 64px;
+      right: 6px;
+      
     }
   }
 
   &__link {
     display: block;
-    @include letter-size(1.25rem, 0.025em);
-    @include padding(37px, null, null, $gap * 2);
+    @include letter-size(1.125rem, 0.1em);
+    @include padding(37px, null, null, 39px);
     transition: color 0.5s;
 
     @include md {

@@ -17,6 +17,5 @@
     display: grid;
     grid-template-columns: auto 1fr;
     @extend %container;
-    padding-right: 5px;
   }
 }
