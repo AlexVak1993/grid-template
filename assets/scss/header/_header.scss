@@ -6,20 +6,5 @@
   background-position: 50% 50%;
   display: grid;
   align-items: center;
-
-  @include lg-min {
-    min-height: 100vh;
-  }
-
-  @include lg-md {
-    min-height: 766px;
-  }
-
-  @include md-sm {
-    min-height: 560px;
-  }
-
-  @include sm {
-    min-height: 992px;
-  }
+  min-height: 100vh;
 }

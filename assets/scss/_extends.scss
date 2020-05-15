@@ -19,7 +19,6 @@
 %input-theme {
   height: 60px;
   align-items: center;
-  color: $color-light;
   background-color: rgba($color-light, 0.05);
   font-family: $font-main;
   border: none;
@@ -27,7 +26,7 @@
   outline: none;
 }
 
-%input-focus {
+%input-hover {
   background-color: rgba($color-light, 0.15);
   border: 2px solid rgba($color-light, 0.10);
   border-bottom: 2px solid $color-light;

@@ -55,7 +55,10 @@
     }
 
     @include md-sm {
-      grid-column: 1 / span 2;
+      &:nth-of-type(1) {
+        grid-column: 1 / span 2;
+      }
+
       @include letter-size(1.125rem, 0.1em);
       @include padding(null, null, null, 23px);
     }
@@ -66,45 +69,19 @@
       @include margin(6px, $gap, 0, $gap);
     }
 
-    &::placeholder {
-      color: $color-light;
-    }
-
-    &--accent {
-      @extend %input-theme;
-
-      @include lg-min {
-        @include letter-size(1.125rem, 0.1em);
-        @include padding(null, null, null, 36px);
-      }
-
-      @include lg-md {
-        @include letter-size(1rem, 0.1em);
-        @include padding(null, null, 6px, 23px);
-      }
-
-      @include md-sm {
-        @include letter-size(1.125rem, 0.1em);
-        @include padding(null, null, null, 22px);
-      }
-
-      @include sm {
-        @include letter-size(1.125rem, 0.1em);
-        @include padding(null, null, null, 22px);
-        @include margin(6px, $gap, 0, $gap);
-      }
+    &:hover {
+      @extend %input-hover;
 
       &::placeholder {
-        color: rgba($color-light, 0.5);
-      }
-
-      &:focus {
-        @extend %input-focus;
+        color: $color-light;
       }
     }
-
     &:focus {
-      @extend %input-focus;
+      color: $color-light;
+
+      &::placeholder {
+        color: $color-light;
+      }
     }
   }
 
@@ -136,6 +113,11 @@
       @include margin(0, $gap, 12px, $gap);
       height: 60px;
       padding-left: 25px;
+    }
+
+    &:hover {
+      border: 2px solid $color-light;
+      @include padding(16px, 18px, 18px, 25px);
     }
   }
 }
