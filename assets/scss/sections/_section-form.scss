@@ -127,7 +127,7 @@
     @include md-sm {
       @include letter-size(1.125rem, 0.1em);
       height: 60px;
-      width: 352px;
+      max-width: 352px;
       padding-left: 25px;
     }
 
