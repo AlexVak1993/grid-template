@@ -5,10 +5,6 @@
   width: 100%;
   z-index: 1;
 
-  @include lg {
-    padding-right: $gap / 2;
-  }
-
   @include md {
       background-color: rgba(68, 89, 110, 0.25);
     }
@@ -18,5 +14,9 @@
     grid-template-columns: auto 1fr;
     @include padding($gap, null, $gap, null);
     @extend %container;
+
+    @include md {
+      @include padding(0, null, 4px, null);
+    }
   }
 }

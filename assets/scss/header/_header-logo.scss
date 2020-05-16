@@ -1,10 +1,13 @@
 .header-logo {
   align-self: center;
   @include letter-size(1.5rem, 0.22em);
-  padding-top: 17px;
 
-  @include lg {
-    padding-left: 21px;
+  @include md-min {
+    padding-top: 17px;
+  }
+
+  @include md {
+    padding-top: 0;
   }
 
   &__link {

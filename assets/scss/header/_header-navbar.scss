@@ -148,7 +148,7 @@
     }
 
     @include lg-md {
-      @include padding(33px, null, null, 41px);
+      @include padding($gap, null, null, 41px);
     }
   }
 }
