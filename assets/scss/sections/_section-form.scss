@@ -43,6 +43,9 @@
 
   &__input {
     @extend %input-theme;
+    &::placeholder {
+      color: $color-gray;
+    }
 
     @include lg-min {
       @include letter-size(1.125rem, 0.1em);
@@ -86,10 +89,11 @@
   }
 
   &__btn {
-    border: none;
+    border: transparent;
     border-bottom: 2px solid rgba($color-light, 0.25);
     color: $color-light;
     @include letter-size(1.25rem, 0.05em);
+    transition: background-color 0.5s, border-color 0.5s;
 
     @include lg-min {
       padding-left: 27px;

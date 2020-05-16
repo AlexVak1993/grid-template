@@ -136,7 +136,7 @@
   &__link {
     display: block;
     @include letter-size(1.125rem, 0.1em);
-    @include padding(37px, null, null, 38px);
+    @include padding(16px, null, null, 38px);
     transition: color 0.5s;
 
     @include md {

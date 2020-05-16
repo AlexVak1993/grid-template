@@ -7,4 +7,5 @@
   display: grid;
   align-items: center;
   min-height: 100vh;
+  @include padding(150px, null, 150px, null);
 }
