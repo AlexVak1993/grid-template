@@ -118,16 +118,16 @@
     @include md {
       display: none;
       position: absolute;
-      top: 18px;
-      right: 35px;
+      top: 100px;
+      right: 6px;
       background-color: rgba($color-gray-dark, 0.9);
       text-align: center;
-      @include padding(null, 14px, 30px, null);
+      @include padding(null, 14px, 15px, null);
       width: 153px;
     }
 
     @include sm {
-      top: 64px;
+      top: 100px;
       right: 6px;
       
     }
@@ -141,6 +141,11 @@
 
     @include md {
       padding-right: 20px;
+      padding-bottom: 10px;
+
+      &:not(:last-of-type) {
+        padding-bottom: 10px;
+      }
     }
 
     &:hover {

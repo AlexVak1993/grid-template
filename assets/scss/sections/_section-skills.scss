@@ -50,13 +50,19 @@
   background-color: $color-primary;
   overflow: hidden;
 
-  @include lg-min {
+  @media (min-height: 691px) {
     min-height: calc(33.33vh - 20px * 0.66);
   }
-
-  @include lg {
-    min-height: 350px;
+  @media (max-height: 690px) {
+    min-height: calc(220px - 20px * 0.66);
   }
+  // @include lg-min {
+  //   min-height: calc(33.33vh - 20px * 0.66);
+  // }
+
+  // @include lg {
+  //   min-height: 350px;
+  // }
 
   @include md-sm {
     &:nth-of-type(5) {
